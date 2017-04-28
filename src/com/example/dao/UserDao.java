@@ -28,7 +28,12 @@ public class UserDao extends Dao {
                 String pWord = rs.getString("password");
                 if (pWord.equals(password)) {
                 	//Password matches
+                	System.out.printf("true");
                 	success = true;
+                }
+                else{
+                	System.out.printf("false");
+                	success = false;
                 }
             }
         } 

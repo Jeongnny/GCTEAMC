@@ -12,11 +12,24 @@ public class MainUI {
 		
 	public String login(HttpServletRequest request, HttpServletResponse repsonse){
 		Controller controller = new Controller();
-		String forwardToJsp = "";		
+		String forwardToJsp = "";	
+		Boolean success = false;
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		controller.login(username, password);
-		forwardToJsp = "/homepage.html";
+		success = controller.login(username, password);
+		HttpSession session = request.getSession();
+		if(success){
+			
+			session.setAttribute("username", username);
+			forwardToJsp = "/homepage.jsp";
+			System.out.printf("should send to test.jsp");
+			
+		}
+		else{
+			session.setAttribute("username", null);
+			forwardToJsp = "/homepage.html";
+		}
+		
 		return forwardToJsp;
 	}
 	
@@ -24,6 +37,8 @@ public class MainUI {
 		Controller controller = new Controller();
 		String forwardToJsp = "";		
 		controller.logout();
+		HttpSession session = request.getSession();
+		session.setAttribute("username", null);
 		forwardToJsp = "/homepage.html";
 		return forwardToJsp;
 	}
@@ -49,7 +64,7 @@ public class MainUI {
 		String checkInDate = request.getParameter("checkInDate");		//TODO:
 		String checkOutDate = request.getParameter("checkOutDate");		//Change according to front end
 		String roomType = request.getParameter("roomType");
-		System.out.printf("regDOB: %s",regDOB);
+		//System.out.printf("regDOB: %s",regDOB);
 		controller.searchRoom(checkInDate, checkOutDate, roomType);
 		forwardToJsp = "/homepage.html";
 		return forwardToJsp;

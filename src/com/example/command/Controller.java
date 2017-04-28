@@ -12,14 +12,16 @@ public class Controller {
 	UserDao userdao = new UserDao();
 	RoomDao roomdao = new RoomDao();
 	public boolean login(String username, String password){
+		Boolean success = false;
 		try {			
-			userdao.login(username, password);
-			return true;
+			success = userdao.login(username, password);
+			
 		} 
 		catch (DaoException e) {
 			e.printStackTrace();
-			return false;
+			success = false;
 		}
+		return success;
 	}//End login
 	
 	public boolean logout(){
