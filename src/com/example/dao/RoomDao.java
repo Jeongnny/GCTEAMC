@@ -43,8 +43,8 @@ public class RoomDao extends Dao {
                 type = rs.getString("type");				//Change according to
                 isSmoking = rs.getString("isSmoking");	//database attributes
                 
-                Room room = new Room(no,type,isSmoking);
-                roomList.add(room);
+                //Room room = new Room(no,type,isSmoking);
+                //roomList.add(room);
             }
         } 
         catch (SQLException e) {
