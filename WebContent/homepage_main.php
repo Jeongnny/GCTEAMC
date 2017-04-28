@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,58 +27,12 @@
 
 </head>
 <body>
-	
 
 	<nav class="navbar navbar-inverse">
 
 	  	<div class="container">
 	  		<!-- Navbar Header -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>                        
-		      </button>
-		      <a class="navbar-brand" href="#">Appy Days</a>
-		    </div>
-
-		    <!-- Navbar contents -->
-		    <div class="collapse navbar-collapse" id="myNavbar">
-		      <ul class="nav navbar-nav">
-		        <li class="dropdown">
-		          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Offers <span class="caret"></span></a>
-		          <ul class="dropdown-menu">
-		            <li><a href="offers.html">Spa Discounts</a></li>
-		            <li><a href="offers.html">Room Discounts</a></li>
-		            <li><a href="offers.html">Voucher Codes</a></li>
-		          </ul>
-		        </li>
-		        <li><a href="reservation.html">Reservation</a></li>
-		        <li><a href="about.html">About</a></li>
-		        <li><a href="account.html">My Account</a></li>
-		        <li><a href="admin.html">Admin Panel</a></li>
-		      </ul>
-
-		      <!-- Right Nav Bar -->
-		      <ul class="nav navbar-nav navbar-right">
-		      <%!
-		      
-		      String someOutput() {
-		    	     return "<li><a href=\"#\" data-toggle=\"modal\" data-target=\"#registerModal\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>";
-		    	  }
-		      %>
-		      <%!
-		      String someOutput2(){
-		    	  return "<li><a href=\"#\" data-toggle=\"modal\" data-target=\"#loginModal\"><span class=\"glyphicon glyphicon-log-in\" ></span> Login</a></li>";
-		      }
-		      %>
-		      
-		      <%= someOutput() %>
-
-		     		      
-		        
-		      </ul>
-		    </div>
+		    <?php include 'navbar_nouser.php'; ?>
 	  	</div>
 	</nav>
 
@@ -93,40 +45,28 @@
 		</div>
 	</div>
 
-	<!-- Search Box -->
-	<div class="container" id="searchContainer">
-
-		<div class="row center-block" id="custom-search-input">
-			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 input-group">
-				<input type="text" class="form-control" placeholder="Search Rooms">
-				<span class="input-group-btn">
-					<button class="btn btn-info btn-lg" type="button">
-						<i class="glyphicon glyphicon-search"></i>
-					</button>
-				</span>
+	<!-- Search Room Redirect-->
+	<div class="container" id="redirectContainer">
+		<div class ="row tex-center">
+			<div class="row">
+				<h2 class="text-center" id="findHeading">Find a Room</h2>
 			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 input-group">
-				<div class="col-lg-6 col-md-4 col-sm-6 col-xs-6 dateBox">
-					Insert Date Picker
-				</div>
-				<div class="col-lg-6 col-md-4 col-sm-6 col-xs-6 dateBox">
-					Insert Date Picker 2
-				</div>
-				<div class="col-xs-12 roomTypeBox">
-					<div class="dropdown">
-						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="roomTypeButton">Room Type
-						<span class="caret"></span></button>
-						<ul class="dropdown-menu" id="roomType">
-							<li><a href="#">Single Room</a></li>
-							<li><a href="#">Double Room</a></li>
-							<li><a href="#">Family Room</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+
+			<div class="col-sm-4 col-md-4 text-center">
+	            <!--Empty Slot-->
+        	</div>
+
+			<div class="col-sm-4 col-md-4 text-center">
+	            <div class="thumbnail">
+	                <button type="button" class="btn btn-primary" onclick="location.href = 'reservation.html';" >Find Room</button>
+	            </div>
+        	</div>
+
+        	<div class="col-sm-4 col-md-4 text-center">
+	            <!--Empty Slot-->
+        	</div>
+
 		</div>
 	</div>
 
@@ -190,28 +130,39 @@
 	        </div>
 
 	        <div class="modal-body">
-	        <form action="FrontController" method="post">
 	          <div class="form-group">
-	          	<label for="username">Username</label>
-	          	<input type="text" class="form-control" placeholder="username" name="regUsername" id="registerUsername">
+	          	<label for="username">UserID<span style="color: red;"> *</span></label>
+	          	<input type="text" class="form-control" placeholder="UserID" name="regUsername" id="registerUsername">
 	          </div>
 	          <div class="form-group">
-	          	<label for="password">Password</label>
+	          	<label for="password">Password<span style="color: red;"> *</span></label>
 	          	<input type="password" class="form-control" placeholder="********" name="regPassword" id="registerPassword">
 	          </div>
 	          <div class="form-group">
-	          	<label for="confirmPassword">Confirm Password</label>
+	          	<label for="confirmPassword">Confirm Password<span style="color: red;"> *</span></label>
 	          	<input type="password" class="form-control" placeholder="********" name="regConfirmPassword" id="registerConfirmPassword">
+	          </div>
+	          <div class="form-group">
+	          	<label for="firstname">First Name<span style="color: red;"> *</span></label>
+	          	<input type="text" class="form-control" placeholder="" name="regFirstName" id="registerFirstName">
+	          </div>
+	          <div class="form-group">
+	          	<label for="lastname">Last Name<span style="color: red;"> *</span></label>
+	          	<input type="text" class="form-control" placeholder="" name="regLastName" id="registerLastName">
+	          </div>
+	          <div class="form-group">
+	          	<label for="gender">Gender<span style="color: red;"> *</span></label>
+	          	<input type="radio" class="form-control" name="regGender" value="male" id="registerGender">Male
+	          	<input type="radio" class="form-control" name="regGender" value="female" id="registerGender">Female
+	          </div>
+	          <div class="form-group">
+	          	<label for="birthday">Date of Birth<span style="color: red;"> *</span></label>
+	          	<input type="date" class="form-control" placeholder="DDMMYYYY" name="regdateOfBirth" id="registerDateOfBirth">
 	          </div>
 	          <div class="form-group">
 	          	<label for="email">Email</label>
 	          	<input type="email" class="form-control" placeholder="" name="regEmail" id="registerEmail">
 	          </div>
-	          <div class="form-group">
-      			<label>Date of Birth</label>
-     			<input type="date" class="form-control" id="dateOfBirth" placeholder="Date of Birth" name="regDOB">
-     		  </div>
-
 	          <div class="form-group">
 	          	<label for="Address">Address</label>
 	          	<input type="text" class="form-control" placeholder="" name="regContactNumber" id="registerContactNumber">
@@ -219,10 +170,7 @@
 	        </div>
 	   
 	        <div class="modal-footer">
-	        	<!-- Added to connect to back end -->
-	        	<input type="hidden" name="action" value="register">
 		        <button class="btn btn-default btn-md">Register</button>
-		    </form>
 	        </div>
 	      </div>
 	    </div>
