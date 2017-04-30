@@ -21,7 +21,7 @@
 
 	<script type="text/javascript" src="hotel.js"></script>
 
-
+	<script src="bootstrap/js/bootstrap.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="homestyle.css" />
 
