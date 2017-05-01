@@ -1,4 +1,3 @@
-<!-- Reception panel page for receptionist -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +17,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="homestyle.css" />
 </head>
 <body>
@@ -27,22 +27,7 @@
 	</nav>
 	
 	<div class="container">
-		<div class="row">
-			<h1 class="text-center">Reception Panel</h1>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12  text-center">
-				<a href="checkInOut_reception.php" class="btn btn-md btn-primary" id="adminButton">Check In/Check Out</a>
-			</div>
-			<div class="col-xs-12  text-center">
-				<a href="createReservation_reception.php" class="btn btn-md btn-primary" id="adminButton">Create Reservation</a>
-			</div>
-			<div class="col-xs-12  text-center">
-				<a href="createUser_reception.php" class="btn btn-md btn-primary" id="adminButton">Create User</a>
-			</div>
-
-		</div>
+		<?php include 'createReservation_body.php'; ?>
 	</div>
 </body>
 </html>
