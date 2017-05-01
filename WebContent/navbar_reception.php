@@ -27,7 +27,6 @@
 
 </head>
 <body>
-
 	<nav class="navbar navbar-inverse">
 
 	  	<div class="container">
@@ -38,7 +37,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>                        
 		      </button>
-		      <a class="navbar-brand" href="#">Appy Days</a>
+		      <a class="navbar-brand" href="homepage_reception.php">Appy Days</a>
 		    </div>
 
 		    <!-- Navbar contents -->
@@ -52,9 +51,9 @@
 		            <li><a href="offers.html">Voucher Codes</a></li>
 		          </ul>
 		        </li>
-		        <li><a href="reservation.html">Reservation</a></li>
-		        <li><a href="about.html">About</a></li>
-		        <li><a href="reception.html">Reception Panel</a></li>
+		        <li><a href="reservation_reception.php">Reservation</a></li>
+		        <li><a href="about_reception.php">About</a></li>
+		        <li><a href="reception_reception.php">Reception Panel</a></li>
 		      </ul>
 
 		      <!-- Right Nav Bar -->
