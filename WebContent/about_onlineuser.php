@@ -23,8 +23,8 @@
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
-		<!-- Navbar -->
-		<?php include 'navbar_nouser.php'; ?>
+			<!-- Navbar for online-user -->
+		<?php include 'navbar_onlineuser.php'; ?>
 	</nav>
 	
 	<!-- Contents about About page -->	
