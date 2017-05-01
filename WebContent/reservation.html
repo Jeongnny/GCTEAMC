@@ -17,9 +17,33 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<script type='text/javascript' src='datepicker.js'></script>
+
+	<link rel="stylesheet" href="jquery.css">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script type="text/javascript" src="hotel.js"></script>
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+  } );
+  </script>
+
+  <script>
+  $( function() {
+    
+  } );
+  </script>
+        
 
 
 
@@ -74,45 +98,55 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-6">
 				<div class="dropdown reservationDropdown center-block">
-					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="roomTypeButton">Number of People
-					<span class="caret"></span></button>
-					<ul class="dropdown-menu" id="">
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-					</ul>
+					<div class="form-group">
+						<label for="numberOfPeople">Number of People</label>
+						<select class="form-control" id="numberOfPeople">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+						</select>
+					</div>
 				</div>
-			</div>
+			</div>   
 			
 			<div class="col-xs-12 col-sm-6">
 				<div class="dropdown reservationDropdown center-block">
-					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="roomTypeButton">Room Type
-					<span class="caret"></span></button>
-					<ul class="dropdown-menu" id="">
-						<li><a href="#">Single Room</a></li>
-						<li><a href="#">Double Room</a></li>
-						<li><a href="#">Family Room</a></li>
-					</ul>
+					<div class="form-group">
+						<label for="roomType">Room Type</label>
+						<select class="form-control" id="roomType">
+							<option>Single Room</option>
+							<option>Double Room</option>
+							<option>Family Room</option>
+						</select>
+					</div>
 				</div>
-			</div>
+			</div>            
+		</div>
+			<div class="row" id="datePickers">
+				<div class="col-xs-12 col-sm-6">
+					<div class="text-center center-block">
+						Check In Date:  <input type="text" id="datepicker" name="checkInDate">
+					</div>
+				</div>
 
-			<div class="col-xs-12 col-sm-6">
-				<div class="text-center center-block" id="calendarContainer">
-					Check In Date
+				<div class="col-sm-6 col-xs-12">
+					<div class="text-center center-block">
+						Check Out Date:  <input type="text" id="datepicker2" name="checkOutDate">
+					</div>
 				</div>
 			</div>
+ 
 
-			<div class="col-sm-6 col-xs-12">
-				<div class="text-center center-block" id="calendarContainer">
-					Check Out Date
-				</div>
-			</div>
+			
 	
 			<div class="col-xs-12 col-sm-6">
 				<div class="text-center center-block" id="searchResults">
