@@ -38,7 +38,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>                        
 		      </button>
-		      <a class="navbar-brand" href="#">Appy Days</a>
+		      <a class="navbar-brand" href="homepage_main.php">Appy Days</a>
 		    </div>
 
 		    <!-- Navbar contents -->
@@ -52,8 +52,8 @@
 		            <li><a href="offers.html">Voucher Codes</a></li>
 		          </ul>
 		        </li>
-		        <li><a href="reservation.html">Reservation</a></li>
-		        <li><a href="about.html">About</a></li>
+		        <li><a href="reservation_nouser.php">Reservation</a></li>
+		        <li><a href="about_nouser.php">About</a></li>
 		      </ul>
 
 		      <!-- Right Nav Bar -->
