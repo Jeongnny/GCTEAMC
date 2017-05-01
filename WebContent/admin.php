@@ -18,7 +18,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="homestyle.css" />
 </head>
@@ -27,8 +26,7 @@
 		<!-- Navbar -->
 		<?php include 'navbar_admin.php'; ?>
 	</nav>
-	
-	<!-- Contents about home page -->	
+		
 	<div class="container">
 		<div class="row">
 			<h1 class="text-center">Admin Panel</h1>
@@ -36,17 +34,17 @@
 
 		<div class="row">
 			<div class="col-xs-12  text-center">
-				<a href="manageroom.html" class="btn btn-md btn-primary" id="adminButton">Manage Room</a>
+				<a href="manageRoom.php" class="btn btn-md btn-primary" id="adminButton">Manage Room</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="manageuser.html" class="btn btn-md btn-primary" id="adminButton">Manage Users</a>
+				<a href="manageUser.php" class="btn btn-md btn-primary" id="adminButton">Manage Users</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="managereservation.html" class="btn btn-md btn-primary" id="adminButton">Manage Reservations</a>
+				<a href="manageReservation.php" class="btn btn-md btn-primary" id="adminButton">Manage Reservations</a>
 			</div>
 
 			<div class="col-xs-12  text-center">
-				<a href="voucher.html" class="btn btn-md btn-primary" id="adminButton">Manage Vouchers</a>
+				<a href="manageVoucher.php" class="btn btn-md btn-primary" id="adminButton">Manage Vouchers</a>
 			</div>
 
 		</div>
