@@ -18,7 +18,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="homestyle.css" />
 </head>
 <body>
@@ -29,7 +28,22 @@
 	
 	<!-- Contents about home page -->	
 	<div class="container">
-		<?php include 'reception_body.html'; ?>
+		<div class="row">
+			<h1 class="text-center">Reception Panel</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12  text-center">
+				<a href="checkInOut_admin.php" class="btn btn-md btn-primary" id="adminButton">Check In/Check Out</a>
+			</div>
+			<div class="col-xs-12  text-center">
+				<a href="createReservation_admin.php" class="btn btn-md btn-primary" id="adminButton">Create Reservation</a>
+			</div>
+			<div class="col-xs-12  text-center">
+				<a href="createUser_admin.php" class="btn btn-md btn-primary" id="adminButton">Create User</a>
+			</div>
+
+		</div>
 	</div>
 </body>
 </html>

@@ -27,7 +27,6 @@
 		<?php include 'navbar_admin.php'; ?>
 	</nav>
 	
-	<!-- Contents about home page -->	
 	<div class="container">
 		<?php include 'account_body.php'; ?>
 	</div>
