@@ -3,11 +3,11 @@
 <head>
 	<title>Hotel Booking Extravaganza</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Latest compiled and minified CSS -->
+	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 	<!-- jQuery library -->
@@ -18,8 +18,21 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="homestyle.css" /></head>
+	<script type="text/javascript" src="hotel.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="homestyle.css" />
+</head>
+
 <body>
+	<nav class="navbar navbar-inverse">
+
+		
+			<!-- Navbar Header -->
+			<?php include 'navbar_nouser.php'; ?>
+		
+	</nav>
+	
 	<div class="container">
 		<div class="row">
 			<h1 class="text-center">Room Booking</h1>
@@ -97,5 +110,6 @@
 		</div>
 
 	</div>
+
 </body>
 </html>
