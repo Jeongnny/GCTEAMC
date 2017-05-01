@@ -1,3 +1,4 @@
+<!-- Homepage for admin -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,20 +18,18 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="homestyle.css" />
-
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
-			<!-- Navbar for online-user -->
-		<?php include 'navbar_onlineuser.php'; ?>
+		<!-- Navbar -->
+		<?php include 'navbar_admin.php'; ?>
 	</nav>
 	
-	<!-- Contents about About page -->	
+	<!-- Contents about home page -->	
 	<div class="container">
-		<?php include 'about_body.html'; ?>
+		<?php include 'home_body.html'; ?>
 	</div>
-
 </body>
 </html>

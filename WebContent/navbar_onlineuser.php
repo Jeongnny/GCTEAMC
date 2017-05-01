@@ -38,7 +38,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>                        
 		      </button>
-		      <a class="navbar-brand" href="#">Appy Days</a>
+		      <a class="navbar-brand" href="homepage_onlineuser.php">Appy Days</a>
 		    </div>
 
 		    <!-- Navbar contents -->
@@ -52,9 +52,9 @@
 		            <li><a href="offers.html">Voucher Codes</a></li>
 		          </ul>
 		        </li>
-		        <li><a href="reservation.html">Reservation</a></li>
-		        <li><a href="about.html">About</a></li>
-		        <li><a href="account.html">My Account</a></li>
+		        <li><a href="reservation_onlineuser.php">Reservation</a></li>
+		        <li><a href="about_onlineuser.php">About</a></li>
+		        <li><a href="account_onlineuser.php">My Account</a></li>
 		      </ul>
 
 		      <!-- Right Nav Bar -->
