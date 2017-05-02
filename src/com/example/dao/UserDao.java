@@ -168,4 +168,55 @@ public class UserDao extends Dao {
         }//End finally
         return success;
     }//End addStaff
+    
+    
+    public boolean removeUser(String username, String password) throws DaoException{
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        boolean success = false;
+        try {
+            con = this.getConnection();
+            String query = "SELECT userId, password FROM user WHERE userId = ?;";
+            ps = con.prepareStatement(query);
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                String pWord = rs.getString("password");
+                if (pWord.equals(password)) 
+                {
+                	//Password matches
+                	success = true;
+                	String query2 = "DELETE FROM user WHERE userId = ?;";
+                    ps = con.prepareStatement(query2);
+                    ps.setString(1, username);
+                    ps.executeUpdate();
+                }//End if
+                else
+                {
+                	success = false;
+                }//End else
+            }//End while
+        }//End try
+        catch (SQLException e) {
+            throw new DaoException("removeUser: " + e.getMessage());    
+        } 
+        finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            }//end try 
+            catch (SQLException e) {
+                throw new DaoException("removeUser: " + e.getMessage());
+            }//end catch
+        }//end finally
+        return success;
+    }//End removeUser
 }//end UserDao

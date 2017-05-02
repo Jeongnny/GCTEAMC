@@ -11,6 +11,8 @@ public class Controller {
 	
 	UserDao userdao = new UserDao();
 	RoomDao roomdao = new RoomDao();
+	
+	
 	public boolean login(String username, String password){
 		Boolean success = false;
 		try {			
@@ -23,6 +25,8 @@ public class Controller {
 		}
 		return success;
 	}//End login
+	
+	
 	
 	public String checkPermission(String username){
 		String permission = null;
@@ -60,6 +64,19 @@ public class Controller {
 			return false;
 		}
 	}//End addStaff
+	
+	
+	
+	public boolean removeUser(String username, String password){
+		Boolean success = false;
+		try {			
+			success = userdao.login(username, password);
+		} 
+		catch (DaoException e) {
+			e.printStackTrace();
+		}
+		return success;
+	}//End login
 	
 	
 	

@@ -93,6 +93,18 @@ public class MainUI {
 		return forwardToJsp;
 	}
 	
+	public String removeUser(HttpServletRequest request, HttpServletResponse repsonse){
+		Controller controller = new Controller();
+		String forwardToJsp = "";	
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		controller.removeUser(username, password);
+		HttpSession session = request.getSession();
+		session.setAttribute("username", null);
+		forwardToJsp = "/homepage.html";
+		return forwardToJsp;
+	}//End remove user
+	
 	public String searchRoom(HttpServletRequest request, HttpServletResponse repsonse){
 		Controller controller = new Controller();
 		String forwardToJsp = "";	
