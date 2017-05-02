@@ -23,7 +23,7 @@ public class MainUI {
 			String permission = checkPermission(username);
 			switch (permission) {
 			case "user":
-				forwardToJsp = "/homepage.jsp";	 //user page
+				forwardToJsp = "/homepage_onlineuser.jsp";	 //user page
 				break;
 				
 			case "receptionist":
@@ -31,17 +31,17 @@ public class MainUI {
 				break;
 				
 			case "admin":
-				forwardToJsp = "/homepage.html";//admin page
+				forwardToJsp = "/homepage_admin.jsp";//admin page
 				break;
 			
 			default: 
-				forwardToJsp = "/homepage.html";
+				forwardToJsp = "/homepage_main.jsp";
 				break;
 			}	
 		}
 		else{
 			session.setAttribute("username", null);
-			forwardToJsp = "/homepage.html";  //not logged in page
+			forwardToJsp = "/homepage_main.jsp";  //not logged in page
 		}
 		
 		return forwardToJsp;
