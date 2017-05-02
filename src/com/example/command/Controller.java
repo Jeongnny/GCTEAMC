@@ -24,6 +24,17 @@ public class Controller {
 		return success;
 	}//End login
 	
+	public String checkPermission(String username){
+		String permission = null;
+		try {			
+			permission = userdao.checkPermission(username);
+		} 
+		catch (DaoException e) {
+			e.printStackTrace();
+		}
+		return permission;
+	}//end checkPermission
+	
 	public boolean logout(){
 		return true;
 	}//End logout
