@@ -73,8 +73,22 @@ public class MainUI {
 		String registerEmail = request.getParameter("registerEmail");
 		String regDOB = request.getParameter("regDOB");
 		String regContactNumber = request.getParameter("regContactNumber");
-		System.out.printf("regDOB: %s",regDOB);
 		controller.register(regUsername, regPassword, regConfirmPassword, registerEmail, regDOB, regContactNumber);
+		forwardToJsp = "/homepage.html";
+		return forwardToJsp;
+	}
+	
+	public String addStaff(HttpServletRequest request, HttpServletResponse repsonse){
+		Controller controller = new Controller();
+		String forwardToJsp = "";	
+		String regUsername = request.getParameter("regUsername");
+		String regPassword = request.getParameter("regPassword");
+		String regConfirmPassword = request.getParameter("regConfirmPassword");
+		String registerEmail = request.getParameter("registerEmail");
+		String regDOB = request.getParameter("regDOB");
+		String regContactNumber = request.getParameter("regContactNumber");
+		String regPriv = request.getParameter("regPriv");
+		controller.addStaff(regUsername, regPassword, regConfirmPassword, registerEmail, regDOB, regContactNumber, regPriv);
 		forwardToJsp = "/homepage.html";
 		return forwardToJsp;
 	}

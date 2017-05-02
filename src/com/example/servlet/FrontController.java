@@ -70,6 +70,10 @@ public class FrontController extends HttpServlet {
 			forwardToJsp = mainUi.register(request, response);
 			break;
 			
+		case "addStaff":
+			forwardToJsp = mainUi.addStaff(request, response);
+			break;
+			
 		case "searchRoom":
 			forwardToJsp = mainUi.searchRoom(request, response);
 			break;

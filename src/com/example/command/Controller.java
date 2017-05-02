@@ -48,7 +48,20 @@ public class Controller {
 			e.printStackTrace();
 			return false;
 		}
-	}//End login
+	}//End register
+	
+	public boolean addStaff(String regUsername, String regPassword, String regConfirmPassword, String registerEmail, String regDOB, String regContactNumber, String regPriv){
+		try {			
+			userdao.addStaff(regUsername, regPassword, regConfirmPassword, registerEmail, regDOB, regContactNumber, regPriv);
+			return true;
+		} 
+		catch (DaoException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}//End addStaff
+	
+	
 	
 	public ArrayList<Room> searchRoom(String checkInDate, String checkOutDate, String roomType){
 		
