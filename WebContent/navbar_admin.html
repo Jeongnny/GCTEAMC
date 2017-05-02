@@ -61,7 +61,10 @@
 
 				<!-- Right Nav Bar -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="homepage_main.jsp"><span class="glyphicon glyphicon-log-out" ></span> Logout</a></li>
+					<form action="FrontController" method="post">
+					<input type="hidden" name="action" value="logout">
+					<li><button class="btn btn-default btn-md"><span class="glyphicon glyphicon-log-out" ></span> Logout</button></li>
+					</form>
 				</ul>
 			</div>
 		</div>

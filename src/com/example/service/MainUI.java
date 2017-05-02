@@ -27,7 +27,7 @@ public class MainUI {
 				break;
 				
 			case "receptionist":
-				forwardToJsp = "/homepage.jsp";//receptionist page
+				forwardToJsp = "/homepage_reception.jsp";//receptionist page
 				break;
 				
 			case "admin":
@@ -60,7 +60,7 @@ public class MainUI {
 		controller.logout();
 		HttpSession session = request.getSession();
 		session.setAttribute("username", null);
-		forwardToJsp = "/homepage.html";
+		forwardToJsp = "/homepage_main.jsp";
 		return forwardToJsp;
 	}
 	
