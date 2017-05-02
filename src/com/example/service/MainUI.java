@@ -19,18 +19,39 @@ public class MainUI {
 		success = controller.login(username, password);
 		HttpSession session = request.getSession();
 		if(success){
-			
 			session.setAttribute("username", username);
-			forwardToJsp = "/homepage.jsp";
-			System.out.printf("should send to test.jsp");
+			String permission = checkPermission(username);
+			switch (permission) {
+			case "user":
+				forwardToJsp = "/homepage.jsp";	 //user page
+				break;
+				
+			case "receptionist":
+				forwardToJsp = "/homepage.jsp";//receptionist page
+				break;
+				
+			case "admin":
+				forwardToJsp = "/homepage.html";//admin page
+				break;
 			
+			default: 
+				forwardToJsp = "/homepage.html";
+				break;
+			}	
 		}
 		else{
 			session.setAttribute("username", null);
-			forwardToJsp = "/homepage.html";
+			forwardToJsp = "/homepage.html";  //not logged in page
 		}
 		
 		return forwardToJsp;
+	}
+	
+	public String checkPermission(String username){
+		Controller controller = new Controller();
+		String permission = null;
+		permission = controller.checkPermission(username);
+		return permission;
 	}
 	
 	public String logout(HttpServletRequest request, HttpServletResponse repsonse){

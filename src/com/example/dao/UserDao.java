@@ -57,7 +57,46 @@ public class UserDao extends Dao {
             }//end catch
         }//end finally
         return success;
-    }
+    }//End login
+    
+    public String checkPermission(String username) throws DaoException{
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String permission = null;;
+        try {
+            con = this.getConnection();
+            
+            String query = "SELECT userId, privilege FROM user WHERE userId = ?;";
+            ps = con.prepareStatement(query);
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+            
+            while (rs.next()) {
+                permission = rs.getString("privilege");
+            }
+        } 
+        catch (SQLException e) {
+            throw new DaoException("checkPermission: " + e.getMessage());    
+        } 
+        finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            }//end try 
+            catch (SQLException e) {
+                throw new DaoException("checkPermission: " + e.getMessage());
+            }//end catch
+        }//end finally
+        return permission;
+    }//End checkPermission
     
     public boolean register(String regUsername, String regPassword, String regConfirmPassword, String registerEmail, String regDOB, String regContactNumber) throws DaoException{
         Connection con = null;
