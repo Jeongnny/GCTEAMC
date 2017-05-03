@@ -36,13 +36,13 @@
 
 		<div class="row">
 			<div class="col-xs-12  text-center">
-				<a href="checkInOut_reception.php" class="btn btn-md btn-primary" id="adminButton">Check In/Check Out</a>
+				<a href="checkInOut_reception.jsp" class="btn btn-md btn-primary" id="adminButton">Check In/Check Out</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="createReservation_reception.php" class="btn btn-md btn-primary" id="adminButton">Create Reservation</a>
+				<a href="createReservation_reception.jsp" class="btn btn-md btn-primary" id="adminButton">Create Reservation</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="createUser_reception.php" class="btn btn-md btn-primary" id="adminButton">Create User</a>
+				<a href="createUser_reception.jsp" class="btn btn-md btn-primary" id="adminButton">Create User</a>
 			</div>
 
 		</div>

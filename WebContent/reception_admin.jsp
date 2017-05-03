@@ -37,13 +37,13 @@
 
 		<div class="row">
 			<div class="col-xs-12  text-center">
-				<a href="checkInOut_admin.php" class="btn btn-md btn-primary" id="adminButton">Check In/Check Out</a>
+				<a href="checkInOut_admin.jsp" class="btn btn-md btn-primary" id="adminButton">Check In/Check Out</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="createReservation_admin.php" class="btn btn-md btn-primary" id="adminButton">Create Reservation</a>
+				<a href="createReservation_admin.jsp" class="btn btn-md btn-primary" id="adminButton">Create Reservation</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="createUser_admin.php" class="btn btn-md btn-primary" id="adminButton">Create User</a>
+				<a href="createUser_admin.jsp" class="btn btn-md btn-primary" id="adminButton">Create User</a>
 			</div>
 
 		</div>

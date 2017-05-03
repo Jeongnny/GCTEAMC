@@ -37,17 +37,17 @@
 
 		<div class="row">
 			<div class="col-xs-12  text-center">
-				<a href="manageRoom.php" class="btn btn-md btn-primary" id="adminButton">Manage Room</a>
+				<a href="manageRoom.jsp" class="btn btn-md btn-primary" id="adminButton">Manage Room</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="manageUser.php" class="btn btn-md btn-primary" id="adminButton">Manage Users</a>
+				<a href="manageUser.jsp" class="btn btn-md btn-primary" id="adminButton">Manage Users</a>
 			</div>
 			<div class="col-xs-12  text-center">
-				<a href="manageReservation.php" class="btn btn-md btn-primary" id="adminButton">Manage Reservations</a>
+				<a href="manageReservation.jsp" class="btn btn-md btn-primary" id="adminButton">Manage Reservations</a>
 			</div>
 
 			<div class="col-xs-12  text-center">
-				<a href="manageVoucher.php" class="btn btn-md btn-primary" id="adminButton">Manage Vouchers</a>
+				<a href="manageVoucher.jsp" class="btn btn-md btn-primary" id="adminButton">Manage Vouchers</a>
 			</div>
 
 		</div>
