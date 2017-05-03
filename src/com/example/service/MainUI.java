@@ -19,15 +19,15 @@ public class MainUI {
 		success = controller.login(username, password);
 		HttpSession session = request.getSession();
 		if(success){
-			session.setAttribute("username", username);
 			String permission = checkPermission(username);
+			session.setAttribute("priv", permission);
 			switch (permission) {
 			case "user":
 				forwardToJsp = "/homepage_onlineuser.jsp";	 //user page
 				break;
 				
 			case "receptionist":
-				forwardToJsp = "/homepage.jsp";//receptionist page
+				forwardToJsp = "/homepage_reception.jsp";//receptionist page
 				break;
 				
 			case "admin":
@@ -60,7 +60,7 @@ public class MainUI {
 		controller.logout();
 		HttpSession session = request.getSession();
 		session.setAttribute("username", null);
-		forwardToJsp = "/homepage.html";
+		forwardToJsp = "/homepage_main.jsp";
 		return forwardToJsp;
 	}
 	
