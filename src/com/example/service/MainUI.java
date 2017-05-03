@@ -129,13 +129,6 @@ public class MainUI {
 		return forwardToJsp;
 	}
 
-	private String userId;
-	private String roomNo;
-	private String referenceNo;
-	private String reserveTime;
-	private Date arrDate;
-	private Date depDate;
-	private String checkInStatus;
 	public String makeBooking(HttpServletRequest request, HttpServletResponse repsonse){
 		Controller controller = new Controller();
 		String forwardToJsp = "";	
@@ -144,10 +137,30 @@ public class MainUI {
 		String referenceNo = request.getParameter("referenceNo");
 		String reserveTime = request.getParameter("reserveTime");
 		String arrDatetemp =request.getParameter("checkIn");
-		String depDate =request.getParameter("checkOut");
-		Date arrDate;
-		Date depDate;
+		String depDatetemp =request.getParameter("checkOut");
+		Date arrDate;//need to convert string to Date;
+		Date depDate;//need to convert string to Date;
 		controller.makeBooking(userId,roomNo,referenceNo,reserveTime,arrDate,depDate,"not arrived");
+		forwardToJsp = "/homepage.html";
+		return forwardToJsp;
+	}
+	public String checkIn(HttpServletRequest request, HttpServletResponse repsonse){
+		Controller controller = new Controller();
+		String forwardToJsp = "";	
+		
+		String referenceNo = request.getParameter("referenceNo");
+	
+		controller.checkIn(referenceNo);
+		forwardToJsp = "/homepage.html";
+		return forwardToJsp;
+	}
+	public String checkOut(HttpServletRequest request, HttpServletResponse repsonse){
+		Controller controller = new Controller();
+		String forwardToJsp = "";	
+		
+		String referenceNo = request.getParameter("referenceNo");
+	
+		controller.checkIn(referenceNo);
 		forwardToJsp = "/homepage.html";
 		return forwardToJsp;
 	}

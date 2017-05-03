@@ -162,10 +162,10 @@ public class BookingDao extends Dao {
             	String roomNo=rs.getString("roomNo");
             	String referenceNot=rs.getString("referenceNo");
             	String reserverTime=rs.getString("reserverTime");
-            	Date arrDate=rs.getDate("arrDate");
-            	Date depDate=rs.getDate("depDate");
-            	
-                Booking booking=new Booking(userIdt,roomNo,referenceNot,reserverTime,arrDate,depDate);
+            	Date arrDate=rs.getDate("checkIn");
+            	Date depDate=rs.getDate("checkOut");
+            	String checkInStatus=rs.getString("checkInStatus");
+                Booking booking=new Booking(userIdt,roomNo,referenceNot,reserverTime,arrDate,depDate,checkInStatus);
                 bookingList.add(booking);
                 }
             return bookingList;
@@ -195,7 +195,6 @@ public class BookingDao extends Dao {
 		Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-       ;
         
         try {
             con = this.getConnection();
@@ -229,4 +228,83 @@ public class BookingDao extends Dao {
         }//end finally	
 	}
 	
+
+	public boolean checkIn(String referenceNo) throws DaoException
+	{
+		Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        try {
+            con = this.getConnection();
+           
+            String query = "UPDATE reservation SET checkInStatus = ? WHERE referernceNo = ?  ";
+            
+            ps = con.prepareStatement(query);
+            ps.setString(1, "checked in");
+            ps.setString(2, referenceNo);
+           
+            rs = ps.executeQuery();
+           
+            return true;
+        } 
+        catch (SQLException e) {
+           	throw new DaoException("checked in add: " + e.getMessage());    
+        }
+        finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            }//end try 
+            catch (SQLException e) {
+                throw new DaoException("checked in add: " + e.getMessage());
+            }//end catch
+        }//end finally	
+	}
+	public boolean checkOut(String referenceNo) throws DaoException
+	{
+		Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        try {
+            con = this.getConnection();
+           
+            String query = "UPDATE reservation SET checkInStatus = ? WHERE referernceNo = ?  ";
+            
+            ps = con.prepareStatement(query);
+            ps.setString(1, "checked out");
+            ps.setString(2, referenceNo);
+           
+            rs = ps.executeQuery();
+           
+            return true;
+        } 
+        catch (SQLException e) {
+           	throw new DaoException("checked out add: " + e.getMessage());    
+        }
+        finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            }//end try 
+            catch (SQLException e) {
+                throw new DaoException("checked out add: " + e.getMessage());
+            }//end catch
+        }//end finally	
+	}
 }

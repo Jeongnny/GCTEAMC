@@ -97,10 +97,10 @@ public class Controller {
 		}
 		return null;
 	}
-	public boolean makeBooking(String userId,ArrayList<String> roomNo,String checkIn,String checkOut,String reserveTime,String visitedTime)
+	public boolean makeBooking(String userId,String roomNo,String referenceNo,String reserveTime,Date arrDate,Date depDate,String checkInStatus) 
 	{
 		try {			
-			return bookingdao.makeBooking(userId,roomNo,checkIn,checkOut,reserveTime,visitedTime);
+			return bookingdao.makeBooking(userId,roomNo,referenceNo,reserveTime,arrDate,depDate,checkInStatus);
 		} 
 		catch (DaoException e) {
 			e.printStackTrace();
@@ -121,6 +121,27 @@ public class Controller {
 	{
 		try {			
 			return bookingdao.canselBooking(bookingId);
+		} 
+		catch (DaoException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	public boolean checkIn(String bookingId)
+	{
+		try {			
+			return bookingdao.checkIn(bookingId);
+		} 
+		catch (DaoException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	public boolean checkOut(String bookingId)
+	{
+		try {			
+			return bookingdao.checkOut(bookingId);
 		} 
 		catch (DaoException e) {
 			e.printStackTrace();
