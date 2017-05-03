@@ -5,6 +5,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<% 
+if(session.getAttribute("priv")!=null)
+{
+	String priv=(String)session.getAttribute("priv"); 
+	if(priv.equals("admin")){
+		response.sendRedirect("about_admin.jsp");
+	}
+	else if(priv.equals("receptionist")){
+
+	}
+	else if (priv.equals("user")){
+		response.sendRedirect("about_onlineuser.jsp");
+	}
+	else
+	{
+		response.sendRedirect("about_nouser.jsp");
+	}
+}
+%>
 	<title>Hotel Booking Extravaganza</title>
 
 	<meta charset="utf-8" />

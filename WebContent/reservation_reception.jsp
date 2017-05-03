@@ -4,6 +4,25 @@
 <!-- Reservation page for resceptionist -->
 <!DOCTYPE html>
 <html>
+<%
+if(session.getAttribute("priv")!=null)
+{
+	String priv=(String)session.getAttribute("priv"); 
+	if(priv.equals("admin")){
+		response.sendRedirect("reservation_admin.jsp");
+	}
+	else if(priv.equals("receptionist")){
+
+	}
+	else if (priv.equals("user")){
+		response.sendRedirect("reservation_onlineuser.jsp");
+	}
+	else
+	{
+		response.sendRedirect("reservation_nouser.jsp");
+	}
+}
+	%>
 <head>
 	<title>Hotel Booking Extravaganza</title>
 

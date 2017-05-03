@@ -119,7 +119,7 @@
   					</div>
   				</div>
   				<div class="modal-footer">
-  					<button class="btn btn-default btn-md"><a href="manageRoom.php"> Add</a></button>
+  					<button class="btn btn-default btn-md"><a href="manageRoom.jsp"> Add</a></button>
   				</div>
   			</div>
   		</div>

@@ -5,6 +5,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<% 
+if(session.getAttribute("priv")!=null)
+{
+	String priv=(String)session.getAttribute("priv"); 
+	if(priv.equals("admin")){
+		
+	}
+	else if(priv.equals("receptionist")){
+		response.sendRedirect("about_reception.jsp");
+	}
+	else if (priv.equals("user")){
+		response.sendRedirect("about_onlineuser.jsp");
+	}
+	else
+	{
+		response.sendRedirect("about_nouser.jsp");
+	}
+}
+%>
+
 	<title>Hotel Booking Extravaganza</title>
 
 	<meta charset="utf-8" />
@@ -23,6 +43,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="homestyle.css" />
+
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -30,6 +51,7 @@
 		<jsp:include page="navbar_admin.html"/>
 	</nav>
 	
+	<!-- Contents about About page -->	
 	<div class="container">
 		<jsp:include page="about_body.html"/>
 	</div>
