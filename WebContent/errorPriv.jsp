@@ -6,10 +6,5 @@
 <title>insert title here</title>
 </head>
 <body>
- <%
- 	if(session.getAttribute("username")==null){
- 		response.sendRedirect("homepage.jsp");
- 		}
- %>
- Welcome ${username}
+ERROR: PERMISSION DENIED
  </body></html>

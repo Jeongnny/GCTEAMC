@@ -4,6 +4,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%
+		String priv=(String)session.getAttribute("priv"); 
+		switch(priv){
+		case "admin":
+			response.sendRedirect("reservation_admin.jsp");
+			break;
+			
+		case "receptionist":
+			response.sendRedirect("reservation_reception.jsp");
+			break;
+			
+		case "user":
+			response.sendRedirect("reservation_onlineuser.jsp");
+			break;
+		
+		default:
+			response.sendRedirect("reservation_nouser.jsp");
+			break;
+		}
+	%>
 	<title>Hotel Booking Extravaganza</title>
 
 	<meta charset="utf-8" />

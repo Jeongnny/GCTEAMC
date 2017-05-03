@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+  pageEncoding="UTF-8" %>
+  
 <!DOCTYPE html>
 <html>
 <head>
-
 	<title>Hotel Booking Extravaganza</title>
 
     <meta charset="utf-8" />
@@ -54,7 +56,7 @@
 					</li>
 					<li><a href="reservation_admin.html">Reservations</a></li>
 					<li><a href="about_admin.html">About</a></li>
-					<li><a href="account_admin.htmö">My Account</a></li>
+					<li><a href="account_admin.htmÃ¶">My Account</a></li>
 					<li><a href="admin.html">Admin Panel</a></li>
 					<li><a href="reception_admin.html">Reception Panel</a></li>
 				</ul>

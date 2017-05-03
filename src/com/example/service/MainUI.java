@@ -19,8 +19,8 @@ public class MainUI {
 		success = controller.login(username, password);
 		HttpSession session = request.getSession();
 		if(success){
-			session.setAttribute("username", username);
 			String permission = checkPermission(username);
+			session.setAttribute("priv", permission);
 			switch (permission) {
 			case "user":
 				forwardToJsp = "/homepage_onlineuser.jsp";	 //user page
