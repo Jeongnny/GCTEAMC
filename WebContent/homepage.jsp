@@ -251,27 +251,18 @@
 	          	<input type="password" class="form-control" placeholder="********" name="password" id="loginPassword">
 	          </div>
 				
-	        <div class="modal-footer">
+	         <div class="modal-footer">
 	        
 		        <button type="button" class="btn btn-default btn-md" id="register_button" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Register</button>
 		        <!-- Added to connect to back end -->
 	        	<input type="hidden" name="action" value="login">
 		        <button type="submit" class="btn btn-default btn-md">Login Now</button>
+		     </div>
 		    </form>
-	        </div>
+	        
 	      </div>
 	    </div>
-  	</div>
-
-  	<!-- Footer -->
-
-	<div class="" id="footer">
-		<div class="container">
-			<div class="row text-center">
-				<h1>Footer</h1>
-			</div>
-		</div>
-	</div>
+	   </div>
 
 </body>
 </html> 
