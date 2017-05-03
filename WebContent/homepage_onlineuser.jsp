@@ -39,7 +39,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="homestyle.css" />
 
 </head>
@@ -49,9 +48,81 @@
 		<jsp:include page="navbar_onlineuser.html"/>
 	</nav>
 	
-	<!-- Contents about home page -->	
-	<div class="container">
-		<jsp:include page="home_body.html"/>
+	<!-- Banner -->
+	<div class="container" id="bannerContainer">
+		<div class="row">
+			<div class="banner">
+				<h1 class="text-center"></h1>
+			</div>
+		</div>
+	</div>
+
+	<!-- Search Room Redirect-->
+	<div class="container" id="redirectContainer">
+		<div class ="row tex-center">
+			<div class="row">
+				<h2 class="text-center" id="findHeading">Find a Room</h2>
+			</div>
+
+
+			<div class="col-sm-4 col-md-4 text-center">
+	            <!--Empty Slot-->
+        	</div>
+
+			<div class="col-sm-4 col-md-4 text-center">
+	            <div class="thumbnail">
+	                <button type="button" class="btn btn-primary" onclick="location.href = 'reservation_onlineuser.jsp';" >Find Room</button>
+	            </div>
+        	</div>
+
+        	<div class="col-sm-4 col-md-4 text-center">
+	            <!--Empty Slot-->
+        	</div>
+
+		</div>
+	</div>
+
+	<!-- Offers -->
+
+	<div class="container" id="offerContainer">
+
+		<div class="row text-center">
+
+			<div class="row">
+				<h2 class="text-center" id="offersHeading">Offers and Discounts</h2>
+			</div>
+
+			<div class="col-sm-4 col-md-4 text-center">
+	            <div class="thumbnail">
+	                <h4 class="text-center">
+	                    Spa Offers
+	                </h4>
+	                <img src="images/room1.jpg">
+	                <button type="button" class="btn btn-primary">View</button>
+	            </div>
+        	</div>
+
+        	<div class="col-sm-4 col-md-4 text-center">
+	            <div class="thumbnail">
+	                <h4 class="text-center">
+	                    Room Offers
+	                </h4>
+	                <img src="images/room2.jpg">
+	                <button type="button" class="btn btn-primary">View</button>
+	            </div>
+        	</div>
+
+        	<div class="col-sm-4 col-md-4 text-center">
+	            <div class="thumbnail">
+	                <h4 class="text-center">
+	                    Other Promotions
+	                </h4>
+	                <img src="images/room3.jpg">
+	                <button type="button" class="btn btn-primary">View</button>
+	            </div>
+        	</div>
+
+        </div>
 	</div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8" %>
 
+<!-- My Account page for admin -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +24,7 @@ if(session.getAttribute("priv")!=null)
 	}
 }
 %>
+
 	<title>Hotel Booking Extravaganza</title>
 
 	<meta charset="utf-8" />
@@ -53,6 +55,5 @@ if(session.getAttribute("priv")!=null)
 	<div class="container">
 		<jsp:include page="about_body.html"/>
 	</div>
-
 </body>
 </html>
