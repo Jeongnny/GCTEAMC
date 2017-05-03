@@ -47,9 +47,9 @@
 	<div class="container" id="redirectContainer">
 		<div class ="row tex-center">
 			<div class="row">
-				<h2 class="text-center" id="findHeading">Find a Room</h2>
+				<h3 class="text-center" id="findHeading">Luxurious Accommodation and First-class Service</h3>
+				<h1 class="text-center">The New Dublin Hilton Hotel</h1>
 			</div>
-
 
 			<div class="col-sm-4 col-md-4 text-center">
 	            <!--Empty Slot-->
@@ -57,7 +57,7 @@
 
 			<div class="col-sm-4 col-md-4 text-center">
 	            <div class="thumbnail">
-	                <button type="button" class="btn btn-primary" onclick="location.href = 'reservation_nouser.jsp';" >Find Room</button>
+	                <button type="button" class="btn btn-primary" onclick="location.href = 'reservation_nouser.jsp';" >Book Now</button>
 	            </div>
         	</div>
 
@@ -75,39 +75,56 @@
 		<div class="row text-center">
 
 			<div class="row">
-				<h2 class="text-center" id="offersHeading">Offers and Discounts</h2>
+				<h2 class="text-center" id="offersHeading">Special Offers</h2>
 			</div>
 
-			<div class="col-sm-4 col-md-4 text-center">
+			<div class="col-sm-4 col-md-4">
 	            <div class="thumbnail">
 	                <h4 class="text-center">
-	                    Spa Offers
+	                    ROOMS & SUITES
 	                </h4>
 	                <img src="images/room1.jpg">
-	                <button type="button" class="btn btn-primary">View</button>
+	                <p></p>
+	                <p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p>
+						<a class="btn" href="#">View details »></a>
+					</p>
 	            </div>
         	</div>
 
         	<div class="col-sm-4 col-md-4 text-center">
 	            <div class="thumbnail">
 	                <h4 class="text-center">
-	                    Room Offers
+	                    SPA & GYM
 	                </h4>
 	                <img src="images/room2.jpg">
-	                <button type="button" class="btn btn-primary">View</button>
+	                <p></p>
+	                <p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p>
+						<a class="btn" href="#">View details »</a>
+					</p>
 	            </div>
         	</div>
 
         	<div class="col-sm-4 col-md-4 text-center">
 	            <div class="thumbnail">
 	                <h4 class="text-center">
-	                    Other Promotions
+	                    PACKAGE & EVENT
 	                </h4>
 	                <img src="images/room3.jpg">
-	                <button type="button" class="btn btn-primary">View</button>
-	            </div>
+	                <p></p>
+	                <p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p>
+						<a class="btn" href="#">View details »</a>
+					</p>	            
+				</div>
         	</div>
-
         </div>
 	</div>
 
