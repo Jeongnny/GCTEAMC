@@ -24,5 +24,6 @@ public class Deal {
 		this.dateFrom=dateFrom;
 		this.dateTo=dateTo;
 		this.code=code;		
+		
 	}
 }

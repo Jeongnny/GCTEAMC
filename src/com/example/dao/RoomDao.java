@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.example.business.Booking;
 import com.example.business.Room;
 import com.example.exceptions.DaoException;
 
@@ -15,9 +16,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.sql.Date;
 
 public class RoomDao extends Dao {
-
 	public ArrayList<Room> searchRoom(String checkInDate, String checkOutDate, String roomType) throws DaoException{
 		ArrayList<Room> roomList = new ArrayList<Room>();
 		Connection con = null;
@@ -41,7 +42,7 @@ public class RoomDao extends Dao {
             	
                 no = rs.getString("roomId");				//TODO:
                 type = rs.getString("type");				//Change according to
-                isSmoking = rs.getString("isSmoking");	//database attributes
+                isSmoking = rs.getString("isSmoking");		//database attributes
                 
                 //Room room = new Room(no,type,isSmoking);
                 //roomList.add(room);
@@ -68,6 +69,7 @@ public class RoomDao extends Dao {
         }//end finally
         return roomList;
 	}
+
 	public boolean removeRoom(String roomNo) throws DaoException{
 		
 		Connection con = null;
@@ -145,7 +147,6 @@ public class RoomDao extends Dao {
 	}
 
 	public boolean ammendRoom(String roomNo,String bedType,String smoking,String price) throws DaoException{
-		
 		Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;

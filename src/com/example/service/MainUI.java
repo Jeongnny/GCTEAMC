@@ -1,5 +1,7 @@
 
 package com.example.service;
+import java.sql.Date;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -78,6 +80,7 @@ public class MainUI {
 		forwardToJsp = "/homepage.html";
 		return forwardToJsp;
 	}
+	
 	public String addRoom(HttpServletRequest request, HttpServletResponse repsonse){
 		Controller controller = new Controller();
 		String forwardToJsp = "";	
@@ -98,6 +101,53 @@ public class MainUI {
 		String smoking = request.getParameter("smoking");
 		String price = request.getParameter("price");
 		controller.ammendRoom(roomNo,bedType,smoking,price);
+		forwardToJsp = "/homepage.html";
+		return forwardToJsp;
+	}
+
+	public String getBooking(HttpServletRequest request, HttpServletResponse repsonse){
+		Controller controller = new Controller();
+		String forwardToJsp = "";	
+		String userId = null;
+		String referenceNo=null;
+		userId=request.getParameter("userId");
+		referenceNo= request.getParameter("referenceNo")
+		controller.getBooking(userId,referenceNo);
+		forwardToJsp = "/homepage.html";
+		return forwardToJsp;
+	}
+	
+	public String searchAvailableRoom(HttpServletRequest request, HttpServletResponse repsonse){
+		Controller controller = new Controller();
+		String forwardToJsp = "";	
+		String checkInDatetemp = request.getParameter("checkInDate");
+		String checkOutDatetemp = request.getParameter("checkOutDate");
+		String roomType = request.getParameter("roomType");
+		
+		controller.searchAvailableRoom(checkInDate,checkOutDate,roomType);
+		forwardToJsp = "/homepage.html";
+		return forwardToJsp;
+	}
+
+	private String userId;
+	private String roomNo;
+	private String referenceNo;
+	private String reserveTime;
+	private Date arrDate;
+	private Date depDate;
+	private String checkInStatus;
+	public String makeBooking(HttpServletRequest request, HttpServletResponse repsonse){
+		Controller controller = new Controller();
+		String forwardToJsp = "";	
+		String userId = request.getParameter("userId");
+		String roomNo = request.getParameter("roomNo");
+		String referenceNo = request.getParameter("referenceNo");
+		String reserveTime = request.getParameter("reserveTime");
+		String arrDatetemp =request.getParameter("checkIn");
+		String depDate =request.getParameter("checkOut");
+		Date arrDate;
+		Date depDate;
+		controller.makeBooking(userId,roomNo,referenceNo,reserveTime,arrDate,depDate,"not arrived");
 		forwardToJsp = "/homepage.html";
 		return forwardToJsp;
 	}

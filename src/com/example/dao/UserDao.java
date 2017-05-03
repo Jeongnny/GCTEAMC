@@ -73,10 +73,10 @@ public class UserDao extends Dao {
             ps.setString(2, regPassword);
             ps.setString(3, regUsername);
             ps.setString(4, regDOB);
-            
+      
             ps.executeUpdate();
 
-            	success = true;
+           	success = true;
         } 
         catch (SQLException e) {
             throw new DaoException("register: " + e.getMessage());    
