@@ -46,7 +46,7 @@
 <body>
 	<nav class="navbar navbar-inverse">
 		<!-- Navbar -->
-		<jsp:include page="navbar_admin.jsp"/>
+		<jsp:include page="navbar_admin.html"/>
 	</nav>
 	
 	<!-- Contents about home page -->	

@@ -5,24 +5,23 @@
 <html>
 <head>
 <%
-		String priv=(String)session.getAttribute("priv"); 
-		switch(priv){
-		case "admin":
-			response.sendRedirect("reservation_admin.jsp");
-			break;
-			
-		case "receptionist":
-			response.sendRedirect("reservation_reception.jsp");
-			break;
-			
-		case "user":
-			response.sendRedirect("reservation_onlineuser.jsp");
-			break;
+if(session.getAttribute("priv")!=null)
+{
+	String priv=(String)session.getAttribute("priv"); 
+	if(priv.equals("admin")){
+		response.sendRedirect("reservation_admin.jsp");
+	}
+	else if(priv.equals("receptionist")){
+		response.sendRedirect("reservation_reception.jsp");
+	}
+	else if (priv.equals("user")){
+		response.sendRedirect("reservation_onlineuser.jsp");
+	}
+	else
+	{
 		
-		default:
-			response.sendRedirect("reservation_nouser.jsp");
-			break;
-		}
+	}
+}
 	%>
 	<title>Hotel Booking Extravaganza</title>
 
